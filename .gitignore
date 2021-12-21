@@ -32,3 +32,4 @@
 *.app
 token.json
 bot-info.txt
+.env
