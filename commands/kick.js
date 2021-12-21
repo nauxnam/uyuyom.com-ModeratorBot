@@ -1,7 +1,7 @@
 module.exports = {
     name: "kick",
     description: "Üye kurban etme komutu.",
-    execute(message, args, Discord, GuildMember){
+    execute(client, message, args, Discord){
         // Üye Atma Embed'i
         const kickedEmbed = new Discord.MessageEmbed()
         .setColor('#f46821')

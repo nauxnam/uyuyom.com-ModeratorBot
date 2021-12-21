@@ -1,7 +1,7 @@
 module.exports = {
     name: 'ping',
     description: 'Ping bot.',
-    execute(message, args, Discord) {
+    execute(client, message, args, Discord) {
         const pingEmbed = new Discord.MessageEmbed()
         .setColor('#e4f421')
         .setTitle("uyuyom.com")

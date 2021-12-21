@@ -1,7 +1,7 @@
 module.exports = {
     name: 'clear',
     description: 'Clear specified messages from channel.',
-    async execute(message, args) {
+    async execute(client, message, args) {
         if(message.member.permissions.has("MANAGE_MESSAGES")){
             if(!args[0]) return message.reply("Silmek istediğin mesaj miktarını gir amına koyduğum!");
             if(isNaN(args[0])) return message.reply("Sana matematiği de mi ben öğreteyim ulan! Gerçek rakam yaz!");

@@ -1,7 +1,7 @@
 module.exports = {
     name: 'help',
     description: "Help",
-    execute(message, args, Discord) {
+    execute(client, message, args, Discord) {
         const helpEmbed = new Discord.MessageEmbed()
         .setColor('#6a329f')
         .setTitle("uyuyom.com Moderasyon Botu")

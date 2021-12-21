@@ -1,7 +1,7 @@
 module.exports = {
     name: "ban",
     description: "Ban user command.",
-    execute(message, args, Discord){
+    execute(client, message, args, Discord){
         const banEmbed = new Discord.MessageEmbed()
         .setColor('#ff0000')
         .setTitle('ANANIN AMINA GERİ DÖN!')
