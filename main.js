@@ -1,16 +1,14 @@
 const Discord = require('discord.js');
-
 const client = new Discord.Client({partials:["MESSAGE", "CHANNEL", "REACTION"]});
-
-// Token Dosyası
 const {
     token
 } = require("./token.json");
 
 const prefix = '?';
-
 const fs = require('fs');
 const { GuildMember } = require('discord.js');
+
+const memberCounter = require('./counters/member-counter');
 
 client.commands = new Discord.Collection();
 
@@ -23,6 +21,7 @@ for(const file of commandFiles){
 
 client.once('ready', () => {
     console.log('Moderator is online.')
+    memberCounter(client);
 });
 
 client.on('message', message =>{
