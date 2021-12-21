@@ -6,21 +6,22 @@ module.exports = {
         .setColor('#6a329f')
         .setTitle("uyuyom.com Moderasyon Botu")
         .setURL('http://uyuyom.com/')
-        .setDescription('uyuyom.com Moderasyon Kipi')
-        .setThumbnail('http://uyuyom.com/uyuyom.jpg')
+        .setDescription('Bu bot uyuyom.com`a özel yapılmıştır. Bu botun uyuyom.com dışında başka bir sunucuda kullanılması yasaktır.')
+        .setThumbnail('http://uyuyom.com/img/uyuyom.jpg')
         .addFields(
-            {name: 'Bot Prefix', value: '`?` | (Type `?prefix <your-prefix>` for prefix change.)', inline: true},
-            {name: 'Bot Help', value: 'Type `?help` for displaying bot commands.', inline: true},
-            {name: 'Ping', value: 'Type `?ping` to ping bot.', inline: true},
+            {name: 'Bot Prefixi', value: 'Bot prefixi `?`.', inline: true},
+            {name: 'Bot Yardımı', value: 'Komutlar hakkında yardım için`?help` yazın.', inline: true},
+            {name: 'Ping', value: 'Botun çalışıp çalışmadığını öğrenmek için `?ping` yazın..', inline: true},
             {name: '\u200B', value: '\u200B'},
-            {name: 'Warn', value: 'Type `?warn` to warn a member.', inline: true},
-            {name: 'Kick', value: 'Type `o!kick` to kick a member.', inline: true},
-            {name: 'Ban', value: 'Type `o!ban` to ban a member.', inline: true},
+            {name: 'Uyarı', value: 'Üye uyarmak için `?warn @Birisi <sebep>` yazın.', inline: true},
+            {name: 'Kick', value: 'Üyeyi atmak için `?kick @Birisi <sebep>` yazın.', inline: true},
+            {name: 'Ban', value: 'Üyeyi banlamak için `?ban @Birisi <sebep>` yazın.', inline: true},
             {name: '\u200B', value: '\u200B'},
-            {name: 'Utils', value: 'Utilities'},
-            {name: 'Clear', value: 'Type `?clear <NumberofMessages>` to delete specified amount of messages.', inline: true},
+            {name: 'Araçlar', value: 'Utilities'},
+            {name: 'Mesaj Temizleme', value: 'Yazı kanalındaki mesajları temizlemek için `?clear <mesajadeti>` yazın.', inline: true},
+            
         )
-        .setFooter('uyuyom.com Moderasyon Botu made by nauxnam');
+        .setFooter('uyuyom.com Yönetim Botu | nauxnam');
 
         message.channel.send(helpEmbed).catch(console.error);
     }
