@@ -1,8 +1,12 @@
+const { MessageEmbed } = require('discord.js');
+
 module.exports = {
     name: "ban",
+    aliases: ['https://tenor.com/view/can-we-ban-this-guy-gif-21304842', 'b'],
+    cooldown: 10,
     description: "Ban user command.",
     execute(client, message, args, Discord){
-        const banEmbed = new Discord.MessageEmbed()
+        const banEmbed = new MessageEmbed()
         .setColor('#ff0000')
         .setTitle('ANANIN AMINA GERİ DÖN!')
         .setURL('http://uyuyom.com/')
@@ -10,7 +14,7 @@ module.exports = {
             {name: 'ANASI DA SİKİLDİ!', value: 'Porselen Taht birini daha sürgüne gönderdi!', inline: true},
         )
 
-        const notbanEmbed = new Discord.MessageEmbed()
+        const notbanEmbed = new MessageEmbed()
         .setColor('#ff0000')
         .setTitle('KAÇMA LAN!')
         .setURL('http://uyuyom.com/')
@@ -18,7 +22,7 @@ module.exports = {
             {name: 'SİKİLEMEDİ!', value: 'Üye sürgüne gönderilemedi!', inline: true},
         )
 
-        const errorEmbed = new Discord.MessageEmbed()
+        const errorEmbed = new MessageEmbed()
         .setColor('#ff0000')
         .setTitle('SHUT THE FUCK UP LOWRANK')
         .setURL('http://uyuyom.com/')
@@ -26,7 +30,7 @@ module.exports = {
             {name: 'Yetersiz Yetki', value: 'Bu komut için gerekli komutlara sahip değilsin.', inline: true},
         )
 
-        const permEmbed = new Discord.MessageEmbed()
+        const permEmbed = new MessageEmbed()
         .setColor('#ff0000')
         .setTitle('Yetersiz Bot Yetkisi')
         .setURL('http://uyuyom.com/')

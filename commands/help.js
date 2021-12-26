@@ -1,8 +1,11 @@
+const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: 'help',
+    aliases: ['h', 'halp', 'hhh'],
+    cooldown: 10,
     description: "Help",
     execute(client, message, args, Discord) {
-        const helpEmbed = new Discord.MessageEmbed()
+        const helpEmbed = new MessageEmbed()
         .setColor('#6a329f')
         .setTitle("uyuyom.com Moderasyon Botu")
         .setURL('http://uyuyom.com/')

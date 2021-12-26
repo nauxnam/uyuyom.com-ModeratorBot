@@ -1,9 +1,13 @@
+const { MessageEmbed } = require('discord.js');
+
 module.exports = {
     name: "kick",
+    aliases: ['k', 'tekme'],
+    cooldown: 10,
     description: "Üye kurban etme komutu.",
     execute(client, message, args, Discord){
         // Üye Atma Embed'i
-        const kickedEmbed = new Discord.MessageEmbed()
+        const kickedEmbed = new MessageEmbed()
         .setColor('#f46821')
         .setTitle('ATILDIN!')
         .setURL('http://uyuyom.com/')
@@ -12,7 +16,7 @@ module.exports = {
         )
         
         // Üye Atamama Embed'i
-        const notKickedEmbed = new Discord.MessageEmbed()
+        const notKickedEmbed = new MessageEmbed()
         .setColor('#f46821')
         .setTitle('ATAMADIN!')
         .setURL('http://uyuyom.com/')
@@ -21,7 +25,7 @@ module.exports = {
         )
         
         // Komut için yetersiz üye yetkisi
-        const errorEmbed = new Discord.MessageEmbed()
+        const errorEmbed = new MessageEmbed()
         .setColor('#f46821')
         .setTitle('SHUT THE FUCK UP LOWRANK')
         .setURL('http://uyuyom.com/')
@@ -30,7 +34,7 @@ module.exports = {
         )
         
         // Botun komut için yetersiz yetkisi var
-        const permEmbed = new Discord.MessageEmbed()
+        const permEmbed = new MessageEmbed()
         .setColor('#f46821')
         .setTitle('Yetki Hatası')
         .setURL('http://uyuyom.com/')
